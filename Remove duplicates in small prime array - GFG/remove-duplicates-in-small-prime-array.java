@@ -39,16 +39,18 @@ class Solution
     {
         // code here 
         ArrayList<Integer> ar=new ArrayList<>();
+        
         HashMap<Integer,Integer> hm=new HashMap<>();
         for(int i=0;i<n;i++){
-            hm.put(arr[i],1);
+            // hm.put(arr[i],1);
+            if(!ar.contains(arr[i])) ar.add(arr[i]);
         }
-        for(int i=0;i<n;i++){
-            if(hm.get(arr[i])==1){
-                ar.add(arr[i]);
-                hm.put(arr[i],-1);
-            }
-        }
+        // for(int i=0;i<n;i++){
+        //     if(hm.get(arr[i])==1){
+        //         ar.add(arr[i]);
+        //         hm.put(arr[i],-1);
+        //     }
+        // }
         return ar;
         
     }
