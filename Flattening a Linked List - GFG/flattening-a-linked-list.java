@@ -133,7 +133,7 @@ class GfG
 	    t=t.next;
 	}
 	Collections.sort(ar);
-	
+
 	Node res=new Node(0);
 	Node t1=res;
 	for(int i=0;i<ar.size();i++){
