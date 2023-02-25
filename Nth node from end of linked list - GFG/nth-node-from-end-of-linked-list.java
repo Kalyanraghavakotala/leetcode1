@@ -110,7 +110,6 @@ class GfG
              fast=fast.next;
              slow=slow.next;
         }
-        if(n>0) return -1;
         return slow.data;
     }
 }
