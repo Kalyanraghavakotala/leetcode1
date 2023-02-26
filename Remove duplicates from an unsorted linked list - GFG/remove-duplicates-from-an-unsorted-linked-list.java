@@ -92,26 +92,19 @@ class Solution
     //Function to remove duplicates from unsorted linked list.
     public Node removeDuplicates(Node head) 
     {
-         //ArrayList<Integer> ar=new ArrayList<>();
-         HashMap<Integer,Integer> ar=new HashMap<>();
+         HashMap<Integer,Integer> hm=new HashMap<>();
          Node t1=head;
          Node res=new Node(0);
          Node t=res;
          while(t1!=null){
-             if(!ar.containsKey(t1.data)){
+             if(!hm.containsKey(t1.data)){
                 Node p=new Node(t1.data);
                 t.next=p;
                 t=t.next;
-                ar.put(t1.data,1);
+                hm.put(t1.data,1);
              }
              t1=t1.next;
          }
-        //  if(!ar.containsKey(t1.data)){
-        //      Node p=new Node(t1.data);
-        //         t.next=p;
-        //         t=t.next;
-        //         //ar.put(t1.data,1);
-        //      }
          return res.next;
     }
 }
