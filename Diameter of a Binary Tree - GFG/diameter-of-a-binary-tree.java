@@ -132,26 +132,8 @@ class Solution {
         // Your code here
         if(root==null) return 0;
         c=0;
-        return height(root);
-    }
-}
-
-
-class Solution {
-  public:
-    // Function to return the diameter of a Binary Tree.
-    int c=0;
-    int height(Node* node){
-        if(node==nullptr) return 0;
-        int l=height(node->left);
-        int r=height(node->right);
-        c=max(c,l+r+1);
-        return (max(l,r)+1);
-    }
-    int diameter(Node* root) {
-        // Your code here
-        if(root==nullptr) return 0;
         height(root);
         return c;
     }
-};
+}
+
