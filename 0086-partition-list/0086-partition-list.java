@@ -59,7 +59,7 @@ class Solution {
             temp1=temp1.next;
         }
         temp.next=res1.next; 
-        System.gc();
+        // System.gc();
         return res.next;
     }
 }
